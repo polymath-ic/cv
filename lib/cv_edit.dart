@@ -3,7 +3,8 @@ import 'package:cv/data/cv_data.dart';
 
 class Cvedit extends StatefulWidget {
   final CvDetails cvDetails;
-  const Cvedit({super.key, required this.cvDetails});
+  final Function() reloadData;
+  const Cvedit({super.key, required this.cvDetails, required this.reloadData});
 
   @override
   State<Cvedit> createState() => _CveditState();
@@ -84,13 +85,13 @@ class _CveditState extends State<Cvedit> {
                 ElevatedButton(
                   onPressed: () {
                     if (_formkey.currentState!.validate()) {
-                      setState(() {
-                        widget.cvDetails.Fullname = _Fullnamesctrl.text;
-                        widget.cvDetails.Slackusername = _slackctrl.text;
-                        widget.cvDetails.Github = _githubctrl.text;
-                        widget.cvDetails.Personalbio = _personalbioctrl.text;
-                        Navigator.pop(context);
-                      });
+                      widget.cvDetails.Fullname = _Fullnamesctrl.text;
+                      widget.cvDetails.Slackusername = _slackctrl.text;
+                      widget.cvDetails.Github = _githubctrl.text;
+                      widget.cvDetails.Personalbio = _personalbioctrl.text;
+//this is supposed to reload data
+                      widget.reloadData();
+                      Navigator.pop(context);
                     }
                   },
                   child: const Icon(Icons.check),

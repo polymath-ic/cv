@@ -15,11 +15,12 @@ void main() {
       home: CvScreen(
         cvDetails: cvDetails,
       ),
-      routes: {
-        '/edit': (context) => Cvedit(
-              cvDetails: cvDetails,
-            ),
-      },
+      // routes: {
+      //   '/edit': (context) => Cvedit(
+      //         cvDetails: cvDetails,
+      //         reloadData: (){s},
+      //       ),
+      // },
     ),
   );
 }
@@ -61,6 +62,9 @@ class _CvScreenState extends State<CvScreen> {
                 MaterialPageRoute(
                   builder: (context) => Cvedit(
                     cvDetails: widget.cvDetails,
+                    reloadData: () {
+                      setState(() {});
+                    },
                   ),
                 ),
               );
@@ -171,7 +175,7 @@ class _CvScreenState extends State<CvScreen> {
                           color: Colors.white),
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 50,
                     ),
                     const Text(
                       'Personal Bio:',
