@@ -1,16 +1,10 @@
 # cv
 
-A new Flutter project.
+An editable cv app from task 2: HNG 
 
-## Getting Started
+## LINK FOR TEST
 
-This project is a starting point for a Flutter application.
+- [Click here to test](https://appetize.io/app/pem62mnhxp2c74gmp6ixyo4j34?device=pixel7pro&osVersion=13.0&scale=50)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
